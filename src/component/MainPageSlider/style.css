@@ -1,0 +1,11 @@
+.slider{
+    padding: 47px 0 0 0;
+    width: 100%;
+}
+
+.responsive-advertisements{
+    width: 100%;
+    max-width: 1600px;
+    min-width: 1000px;
+    height: 360px;
+}

@@ -1,0 +1,54 @@
+.account-button{
+    position: absolute;
+    left: 1160px;
+    top: 23px;
+    width: 61px;
+    height: 70px;
+    padding: 11px;
+}
+
+.account-button a {
+    text-decoration: none;
+}
+
+.shopping-cart-button{
+    position: absolute;
+    left: 1293px;
+    top: 24px;
+    width: 113px;
+    height: 70px;
+    padding: 10px;
+}
+
+.inside-text{
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+}
+
+.account-button .inside-icon{
+    position: absolute;
+    left: 9%;
+    right: 50.79%;
+    top: 39.86%;
+    bottom: 18.57%;
+}
+
+.shopping-cart-button .inside-icon{
+    position: absolute;
+    left: 7%;
+    right: 50.79%;
+    top: 39.86%;
+    bottom: 18.57%;
+}
+
+.account-button:hover{
+    background: #a19f99;
+}
+
+.shopping-cart-button:hover{
+    background: #a19f99;
+}

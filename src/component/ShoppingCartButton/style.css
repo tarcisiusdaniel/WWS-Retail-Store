@@ -1,16 +1,3 @@
-.account-button{
-    position: absolute;
-    left: 1160px;
-    top: 23px;
-    width: 61px;
-    height: 70px;
-    padding: 11px;
-}
-
-.account-button a {
-    text-decoration: none;
-}
-
 .shopping-cart-button{
     position: absolute;
     left: 1293px;
@@ -29,24 +16,12 @@
     letter-spacing: 0.05em;
 }
 
-.account-button .inside-icon{
-    position: absolute;
-    left: 9%;
-    right: 50.79%;
-    top: 39.86%;
-    bottom: 18.57%;
-}
-
-.shopping-cart-button .inside-icon{
+.inside-icon{
     position: absolute;
     left: 7%;
     right: 50.79%;
     top: 39.86%;
     bottom: 18.57%;
-}
-
-.account-button:hover{
-    background: #a19f99;
 }
 
 .shopping-cart-button:hover{

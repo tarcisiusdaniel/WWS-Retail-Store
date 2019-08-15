@@ -1,0 +1,24 @@
+.account-button{
+    position: absolute;
+    left: 1160px;
+    top: 23px;
+    width: 61px;
+    height: 70px;
+    padding: 11px;
+}
+
+.account-button a {
+    text-decoration: none;
+}
+
+.account-button .inside-icon{
+    position: absolute;
+    left: 11%;
+    right: 50.79%;
+    top: 39.86%;
+    bottom: 18.57%;
+}
+
+.account-button:hover{
+    background: #a19f99;
+}

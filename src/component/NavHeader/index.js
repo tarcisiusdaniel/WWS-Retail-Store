@@ -1,9 +1,8 @@
 import React from 'react';
 import './style.css';
 import Navbar from '../Navbar';
-import AccShopButton from '../AccShopButton';
-import accountIcon from '../../properties/accountIcon.png';
-import cartIcon from '../../properties/cartIcon.png';
+import AccountButton from '../AccountButton';
+import ShoppingCartButton from '../ShoppingCartButton';
 
 export default class NavHeader extends React.Component{
     constructor(props){
@@ -30,14 +29,8 @@ export default class NavHeader extends React.Component{
                     </form> 
                 </div>
                 <Navbar options = {this.state.navbarOptions}/>
-                <AccShopButton 
-                    class = "account-button" 
-                    text = "Account"
-                    icon = {<img src = {accountIcon} alt = "Account Icon" height = "40" width = "40"/>} />
-                <AccShopButton 
-                    class = "shopping-cart-button" 
-                    text = "Shopping Cart" 
-                    icon = {<img src = {cartIcon} alt = "Shopping Cart Icon" height = "40" width = "40"/>} />
+                <AccountButton />
+                <ShoppingCartButton />
             </div>
         );
     }

@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import nikeAdvertisement from '../../properties/nikeAdvertisement.jpg';
+import booksAdvertisement from '../../properties/booksAdvertisement.jpg';
 import './style.css';
 
 export default class MainPageSlider extends React.Component{
@@ -17,7 +18,7 @@ export default class MainPageSlider extends React.Component{
         const settings = {
             dots: true,
             infinite: true,
-            speed: 500,
+            speed: 1000,
             slidesToShow: 1,
             slidesToScroll: 1        
         };
@@ -29,10 +30,13 @@ export default class MainPageSlider extends React.Component{
                         <img 
                             src = {nikeAdvertisement} 
                             alt = "FlyKnit Advertisement" 
-                            class = "responsive-advertisements"/>
+                            class = "responsive-advertisements" />
                     </div>
                     <div>
-                        <h3>Daniel</h3>
+                        <img 
+                            src = {booksAdvertisement}
+                            alt = "Books Advertisement"
+                            class = "responsive-advertisements" />
                     </div>
                     <div>
                         <h3>Hartanto</h3>

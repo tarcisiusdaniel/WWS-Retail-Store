@@ -20,14 +20,14 @@ li {
 }
 
 li a {
-    padding: 10px 10px 15px 15px;
+    padding: 10px 15px 15px 15px;
     text-decoration: none;
     color: #000000;
 }
 
 .navbar-bottom{
     position: absolute;
-    left: 200px;
+    left: 199px;
     top: 81px;
 }
 

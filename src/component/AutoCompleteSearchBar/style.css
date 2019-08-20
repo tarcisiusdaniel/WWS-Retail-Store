@@ -1,0 +1,8 @@
+.first-container-auto-complete-text{
+    width: 100%;
+    border: 1px solid grey;
+}
+
+.first-container-auto-complete-text input{
+    width: 100%;
+}

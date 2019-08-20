@@ -14,13 +14,17 @@ export default class AccountButton extends React.Component{
     render(){
         return(
             <div class = "account-button">
-            <a href>
-                <span class = "inside-text">Account</span>
-                <span class = "inside-icon">
-                    <img src = {accountIcon} alt = "Account Icon" height = "40" width = "40"/>
-                </span>
-            </a>
-        </div>
+                <a href>
+                    <span class = "inside-text">Account</span>
+                    <span class = "inside-icon">
+                        <img src = {accountIcon} alt = "Account Icon" height = "40" width = "40"/>
+                    </span>
+                </a>
+                <div class = "dropdown-content-account-button">
+                    <a href = "#register">Register</a>
+                    <a href = "#login">Login</a>
+                </div>
+            </div>
         );
     }
 }

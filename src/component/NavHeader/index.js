@@ -8,7 +8,7 @@ export default class NavHeader extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            navbarOptions: ["Today's Deals", "Help", "Browsing History", "Language"]
+            navbarOptions: ["Browsing History", "Today's Deals", "Help", "Browsing History", "Language", "Sell"]
         }
     }
 
@@ -24,8 +24,15 @@ export default class NavHeader extends React.Component{
                 </div>
                 <div class = "search-form">
                     <form>
-                        <input type = "text" placeholder = "Search the item here" class = "search-input"/>
-                        <button type = "submit" class = "submit-search-button">Search</button>
+                        < input 
+                            type = "text" 
+                            placeholder = "Search the item here" 
+                            class = "search-input" />
+                        < button 
+                            type = "submit" 
+                            class = "submit-search-button" >
+                                Search
+                        </button>
                     </form> 
                 </div>
                 <Navbar options = {this.state.navbarOptions}/>

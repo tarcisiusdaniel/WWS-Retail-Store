@@ -13,10 +13,10 @@ export default class Component extends React.Component{
         return (
             <div class = "navbar-bottom">
                 <nav>
-                    <ul>
+                    <ul class = "navbar-ul">
                         {this.state.navbarOptions.map((option, index) => {
                             return (
-                                <li key = {index}>
+                                <li key = {index} class = "navbar-li-options">
                                     <a href>{option}</a>
                                 </li>
                             )

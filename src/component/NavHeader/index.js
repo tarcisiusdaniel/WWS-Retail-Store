@@ -3,6 +3,7 @@ import './style.css';
 import Navbar from '../Navbar';
 import AccountButton from '../AccountButton';
 import ShoppingCartButton from '../ShoppingCartButton';
+import AutoCompleteSearchBar from '../AutoCompleteSearchBar';
 
 export default class NavHeader extends React.Component{
     constructor(props){
@@ -22,8 +23,10 @@ export default class NavHeader extends React.Component{
                         </a>
                     </span>
                 </div>
-                <div class = "search-form">
-                    <form>
+                    <div class = "auto-search-bar">
+                        <AutoCompleteSearchBar />
+                    </div>
+                    {/* <form>
                         < input 
                             type = "text" 
                             placeholder = "Search the item here" 
@@ -33,10 +36,9 @@ export default class NavHeader extends React.Component{
                             class = "submit-search-button" >
                                 Search
                         </button>
-                    </form> 
-                </div>
+                    </form>  */}
                 <Navbar options = {this.state.navbarOptions}/>
-                <AccountButton />
+                <AccountButton/>
                 <ShoppingCartButton />
             </div>
         );

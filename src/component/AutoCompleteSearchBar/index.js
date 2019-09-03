@@ -1,7 +1,8 @@
 import React from 'react';
 import './style.css';
+import { withRouter } from 'react-router-dom';
 
-export default class AutoCompleteSearchBar extends React.Component{
+class AutoCompleteSearchBar extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -10,8 +11,9 @@ export default class AutoCompleteSearchBar extends React.Component{
             userInput: ''
         };
         this.onChangeHandler = this.onChangeHandler.bind(this);
-        // this.selectSuggestion = this.selectSuggestion.bind(this);
-        // this.renderSuggestions = this.renderSuggestions.bind(this);
+        this.selectSuggestion = this.selectSuggestion.bind(this);
+        this.renderSuggestions = this.renderSuggestions.bind(this);
+        this.onSubmitHandler = this.onSubmitHandler.bind(this);
     }
 
     // constructor(props){
@@ -75,10 +77,10 @@ export default class AutoCompleteSearchBar extends React.Component{
             return null;
         }
         return (
-            <ul>
+            <ul class = "dropdown">
                 {
                     suggestions.map(
-                    (suggestion) => <li onClick = {() => this.selectSuggestion(suggestion)}>{suggestion}</li>
+                    (suggestion) => <li class = "dropdown-options" onClick = {() => this.selectSuggestion(suggestion)}>{suggestion}</li>
                 )}
             </ul>
         );
@@ -93,22 +95,30 @@ export default class AutoCompleteSearchBar extends React.Component{
     
     onSubmitHandler(e) {
         e.preventDefault();
-
+        this.props.history.push(`/search/${this.state.userInput}`)
     }
 
     render(){
         const { userInput } = this.state;
         return(
-            <div className = "first-container-auto-complete-text">
-                <form>
-                    <input 
-                        type = "text"
-                        value = {userInput} 
-                        onChange = {this.onChangeHandler} 
-                    />
-                    {this.renderSuggestions()}
-                </form>
+            <div class = "search-form">
+                    <form onSubmit = {this.onSubmitHandler}>
+                        <input 
+                            type = "text"
+                            value = {userInput} 
+                            onChange = {this.onChangeHandler} 
+                            class = "search-input" 
+                        />
+                        < button 
+                            type = "submit" 
+                            class = "submit-search-button" >
+                            Search
+                        </button>
+                        {this.renderSuggestions()}
+                    </form>
             </div>
         );
     }
 }
+
+export default withRouter(AutoCompleteSearchBar);

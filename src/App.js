@@ -5,7 +5,8 @@ import NavHeader from './component/NavHeader';
 import { Switch, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import FlyKnitPage from './pages/FlyKnitPage';
-import AutoCompleteSearchBar from './component/AutoCompleteSearchBar';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -27,21 +28,16 @@ function App() {
     // </div>
 
     <div>
-      <NavHeader />
-      {/* <MainPageSlider /> */}
+      <NavHeader/>
       <Switch>
         <Route exact path = "/" component = {MainPage}/>
-        <Route exact path = "/flyknit/" component = {FlyKnitPage}/>
+        <Route path = "/search/:name" component = {FlyKnitPage}/>
+        <Route path = "/register" component = {RegisterPage}/>
+        <Route path = "/login" component = {LoginPage} />
         {/* <Route exact path = "" component = {}/>
-        <Route exact path = "" component = {}/>
         <Route exact path = "" component = {}/> */}
       </Switch>
-
     </div>
-
-    // <div>
-    //   <AutoCompleteSearchBar />
-    // </div>
   );
 }
 

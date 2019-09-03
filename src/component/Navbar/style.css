@@ -1,4 +1,4 @@
-ul {
+.navbar-ul{
     list-style-type: none;
     margin: 0;
     padding: 10px 0 0 0;
@@ -9,7 +9,7 @@ ul {
     vertical-align: top;
 }
 
-li {
+.navbar-li-options{
     margin: 0;
     display: inline;
     padding: 0;
@@ -19,7 +19,7 @@ li {
     color: #000000;
 }
 
-li a {
+.navbar-li-options a {
     padding: 10px 15px 15px 15px;
     text-decoration: none;
     color: #000000;
@@ -31,7 +31,7 @@ li a {
     top: 81px;
 }
 
-li a:hover {
+.navbar-li-options a:hover {
     /* maslaa */
     background: #a19f99;
 }

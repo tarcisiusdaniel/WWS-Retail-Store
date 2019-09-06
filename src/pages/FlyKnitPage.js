@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import ItemShower from '../component/ItemShower';
 import ItemFilterToolBar from '../component/ItemFilterToolBar';
+import { IMAGES } from '../importer';
 
 const OuterContainer = styled.div `
     position: absolute;
@@ -17,7 +18,7 @@ const Divider = styled.div `
     width: 876px;
     height: 2px;
     background: #FDECEC;
-    margin: 17px 60px;
+    margin: 21px 60px;
 `
 
 const useStyles = makeStyles(theme => ({
@@ -33,11 +34,44 @@ export default class FlyKnitPage extends React.Component{
         this.state = {
             itemAvailableForFlyKnit: [
                 {
-                    name: 'FlyKnit OG',
-                    image: flyKnitTrialImage,
-                    price: 240
-                }
-            ]
+                    name: 'Flyknit OG',
+                    image: IMAGES.FLY_KNIT_TRIAL_IMAGE,
+                    price: 240.00,
+                    divider: true,
+                },
+                {
+                    name: 'Flyknit Spectrum 6.0',
+                    image: IMAGES.FLY_KNIT_TRIAL_IMAGE,
+                    price: 340.00,
+                    divider: true,
+                },
+                {
+                    name: 'Flyknit x Jordan v1.0',
+                    image: IMAGES.FLY_KNIT_TRIAL_IMAGE,
+                    price: 540.00,
+                    divider: true,
+                },
+                {
+                    name: 'Flyknit D',
+                    image: IMAGES.FLY_KNIT_TRIAL_IMAGE,
+                    price: 140.00,
+                    divider: true,
+                },
+                {
+                    name: 'Flyknit E',
+                    image: IMAGES.FLY_KNIT_TRIAL_IMAGE,
+                    price: 440.00,
+                    divider: true,
+                },
+                {
+                    name: 'Flyknit F',
+                    image: IMAGES.FLY_KNIT_TRIAL_IMAGE,
+                    price: 40.00,
+                    divider: false,
+                },
+            ],
+            filters: ['<$100', '$100-200', '$200-300', '$300-400', '$400-500', '>$500'],
+            views: ['Horizontal', 'Vertical']
         }
     }
 
@@ -51,7 +85,7 @@ export default class FlyKnitPage extends React.Component{
                     <div className = {classes.root}>
                         <h3>This is the page for FlyKnit</h3>
                         <p>
-                            Sorry for the inconvenience, this page is under progress of development.
+                            Sorry for the inconvenience, the item you are looking is unavailable.
                             <br/>
                             You can search for other items to buy.
                             <br/>
@@ -65,23 +99,28 @@ export default class FlyKnitPage extends React.Component{
                         <Grid container spacing = {3}>
                             <Grid item xs = {3}>
                                 <div>
-                                    <ItemFilterToolBar />
+                                    <ItemFilterToolBar 
+                                        viewOpt = {this.state.views} 
+                                        filterOpt = {this.state.filters} />
                                 </div>
                             </Grid>
                             <Grid item xs = {9}>
-                                <Grid container spacing = {1}>
-                                    <Grid item xs = {12}>
-                                        <ItemShower />
-                                    </Grid>
-                                    <Divider />
-                                    <Grid item xs = {12}>
-                                        <ItemShower />
-                                    </Grid>
-                                    <Divider />
-                                    <Grid item xs = {12}>
-                                        <ItemShower />
-                                    </Grid>
-                                    <Divider />
+                                <Grid container alignItems = "center">
+                                    {
+                                        this.state.itemAvailableForFlyKnit.map((item) => {
+                                            return (
+                                                <div>
+                                                    <Grid item xs = {12} alignItems = "center">
+                                                        <ItemShower 
+                                                            nameOfTheItem = {item.name}
+                                                            imageOfTheItem = {item.image}
+                                                            priceOfTheItem = {item.price} />
+                                                    </Grid>
+                                                    <Divider />
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 </Grid>
                             </Grid>
                         </Grid>

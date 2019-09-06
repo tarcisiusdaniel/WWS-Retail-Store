@@ -7,6 +7,7 @@ import MainPage from './pages/MainPage';
 import FlyKnitPage from './pages/FlyKnitPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import ItemDetailPage from './pages/ItemDetailPage';
 
 function App() {
   return (
@@ -34,8 +35,8 @@ function App() {
         <Route path = "/search/:name" component = {FlyKnitPage}/>
         <Route path = "/register" component = {RegisterPage}/>
         <Route path = "/login" component = {LoginPage} />
-        {/* <Route exact path = "" component = {}/>
-        <Route exact path = "" component = {}/> */}
+        <Route path = "/trial/details" component = {ItemDetailPage}/>
+        {/* <Route exact path = "" component = {}/> */}
       </Switch>
     </div>
   );

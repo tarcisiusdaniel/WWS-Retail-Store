@@ -1,7 +1,7 @@
 import accountIcon from '../properties/accountIcon.png';
 import booksAdvertisement from '../properties/booksAdvertisement.jpg';
 import cartIcon from '../properties/cartIcon.png';
-import flyKnitTrialImage from '../properties/flyKntiTrialImage.jpeg';
+import flyKnitTrialImage from '../properties/flyknitTrialImage.jpeg';
 import nikeAdvertisement from '../properties/nikeAdvertisement.jpg';
 import sliderTrial1 from '../properties/sliderTrial1.jpg';
 

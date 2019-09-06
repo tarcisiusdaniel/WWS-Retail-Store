@@ -4,3 +4,33 @@
     background: #c4c4c4;
     margin: auto 31px;
 }
+
+.image-item {
+    position: relative;
+    left: 8.03%;
+    top: 17px;
+}
+
+.font {
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+}
+
+.initial-placement {
+    position: relative;
+    top: -30px;
+}
+
+.name-item {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.price-item {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 30px;
+}

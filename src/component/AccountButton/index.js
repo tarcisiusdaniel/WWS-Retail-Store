@@ -44,6 +44,4 @@ class AccountButton extends React.Component{
     }
 }
 
-// export default AccountButton;
-
 export default withRouter(AccountButton);

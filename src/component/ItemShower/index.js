@@ -1,5 +1,4 @@
 import React from 'react';
-import flyknitTrialImage from '../../properties/flyknitTrialImage.jpeg';
 import './style.css';
 import { Grid } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';

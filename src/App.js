@@ -4,7 +4,7 @@ import NavHeader from './component/NavHeader';
 // import MainPageSlider from './component/MainPageSlider';
 import { Switch, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
-import FlyKnitPage from './pages/FlyKnitPage';
+import ItemsPage from './pages/ItemsPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import ItemDetailPage from './pages/ItemDetailPage';
@@ -32,7 +32,7 @@ function App() {
       <NavHeader/>
       <Switch>
         <Route exact path = "/" component = {MainPage}/>
-        <Route path = "/search/:name" component = {FlyKnitPage}/>
+        <Route path = "/search/:name" component = {ItemsPage}/>
         <Route path = "/register" component = {RegisterPage}/>
         <Route path = "/login" component = {LoginPage} />
         <Route path = "/trial/details" component = {ItemDetailPage}/>

@@ -11,7 +11,7 @@ export default class LoginPage extends React.Component{
     render(){
         return(
             <div>
-                <p>Hey</p>
+                <p>Hey, how are you doing?</p>
                 {/* <br/><br/>
                 This is Login page.
                 <p>

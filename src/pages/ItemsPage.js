@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import ItemShower from '../component/ItemShower';
 import ItemFilterToolBar from '../component/ItemFilterToolBar';
+import NavHeader from '../component/NavHeader';
 import { IMAGES } from '../importer';
 
 const OuterContainer = styled.div `
@@ -79,54 +80,59 @@ export default class FlyKnitPage extends React.Component{
         const {itemAvailableForFlyKnit} = this.state;
         const classes = useStyles;
         return (
-            <OuterContainer>
-                {
-                    itemAvailableForFlyKnit.length === 0 && 
-                    <div className = {classes.root}>
-                        <h3>This is the page for FlyKnit</h3>
-                        <p>
-                            Sorry for the inconvenience, the item you are looking is unavailable.
-                            <br/>
-                            You can search for other items to buy.
-                            <br/>
-                            However, I am not sure that other items will be ready as well
-                        </p>
-                    </div> 
-                }
-                {
-                    itemAvailableForFlyKnit.length !== 0 && itemAvailableForFlyKnit.length >= 0 &&
-                    <div className = {classes.root}>
-                        <Grid container spacing = {3}>
-                            <Grid item xs = {3}>
-                                <div>
-                                    <ItemFilterToolBar 
-                                        viewOpt = {this.state.views} 
-                                        filterOpt = {this.state.filters} />
-                                </div>
-                            </Grid>
-                            <Grid item xs = {9}>
-                                <Grid container alignItems = "center">
-                                    {
-                                        this.state.itemAvailableForFlyKnit.map((item) => {
-                                            return (
-                                                <div>
-                                                    <Grid item xs = {12} alignItems = "center">
-                                                        <ItemShower 
-                                                            nameOfTheItem = {item.name}
-                                                            imageOfTheItem = {item.image}
-                                                            priceOfTheItem = {item.price} />
-                                                    </Grid>
-                                                    <Divider />
-                                                </div>
-                                            )
-                                        })
-                                    }
+            <div>
+                <NavHeader/>
+                <OuterContainer>
+                    {
+                        itemAvailableForFlyKnit.length === 0 && 
+                        <div className = {classes.root}>
+                            <h3>This is the page for FlyKnit</h3>
+                            <p>
+                                Sorry for the inconvenience, the item you are looking is unavailable.
+                                <br/>
+                                You can search for other items to buy.
+                                <br/>
+                                However, I am not sure that other items will be ready as well
+                            </p>
+                        </div> 
+                    }
+                    {
+                        itemAvailableForFlyKnit.length !== 0 && itemAvailableForFlyKnit.length >= 0 &&
+                        <div className = {classes.root}>
+                            <Grid container spacing = {3}>
+                                <Grid item xs = {3}>
+                                    <div>
+                                        <ItemFilterToolBar 
+                                            viewOpt = {this.state.views} 
+                                            filterOpt = {this.state.filters} />
+                                    </div>
+                                </Grid>
+                                <Grid item xs = {9}>
+                                    <Grid container alignItems = "center">
+                                        {
+                                            this.state.itemAvailableForFlyKnit.map((item) => {
+                                                return (
+                                                    <a href = "/trial/details" style = {{ textDecoration: 'none', color: 'black' }}> 
+                                                        <div>
+                                                            <Grid item xs = {12} alignItems = "center">
+                                                                <ItemShower 
+                                                                    nameOfTheItem = {item.name}
+                                                                    imageOfTheItem = {item.image}
+                                                                    priceOfTheItem = {item.price} />
+                                                            </Grid>
+                                                            <Divider />
+                                                        </div>
+                                                    </a>
+                                                )
+                                            })
+                                        }
+                                    </Grid>
                                 </Grid>
                             </Grid>
-                        </Grid>
-                    </div>
-                }
-            </OuterContainer>
+                        </div>
+                    }
+                </OuterContainer>
+            </div>
         );
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import NavHeader from './component/NavHeader';
+// import NavHeader from './component/NavHeader';
 // import MainPageSlider from './component/MainPageSlider';
 import { Switch, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
@@ -29,7 +29,7 @@ function App() {
     // </div>
 
     <div>
-      <NavHeader/>
+      {/* <NavHeader/> */}
       <Switch>
         <Route exact path = "/" component = {MainPage}/>
         <Route path = "/search/:name" component = {ItemsPage}/>

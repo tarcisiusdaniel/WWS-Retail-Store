@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import NavHeader from '../component/NavHeader';
 
 const OuterContainer = styled.div `
     position: absolute;
@@ -19,17 +19,20 @@ export default class ItemDetail extends React.Component{
 
     render() {
         return(
-            <OuterContainer>
-                        <p>
-                            Hello, this is the page to show you the detail of the item that you just have selected
-                        </p>
-                        <p>
-                            Unfortunately, the page that you desire is under progress. 
-                        </p>
-                        <p>
-                            We are sorry for the inconvenience.
-                        </p>
-            </OuterContainer>
+            <div>
+                <NavHeader/>
+                <OuterContainer>
+                            <p>
+                                Hello, this is the page to show you the detail of the item that you just have selected
+                            </p>
+                            <p>
+                                Unfortunately, the page that you desire is under progress. 
+                            </p>
+                            <p>
+                                We are sorry for the inconvenience.
+                            </p>
+                </OuterContainer>
+            </div>
         )
     }
 }

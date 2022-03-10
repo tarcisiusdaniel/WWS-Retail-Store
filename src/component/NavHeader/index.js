@@ -18,7 +18,7 @@ export default class NavHeader extends React.Component{
             <div class = "navheader-rectangle">
                 <div class = "retail-logo-container">
                     <span class = "retail-logo">
-                        <a href>
+                        <a href = "/" className = "logo">
                             WWS
                         </a>
                     </span>

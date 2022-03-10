@@ -71,3 +71,8 @@
     left: 1071px;
     top: 34px;
 }
+
+.logo {
+    text-decoration: none;
+    color: black;
+}

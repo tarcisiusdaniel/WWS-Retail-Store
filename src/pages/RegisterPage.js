@@ -11,7 +11,7 @@ export default class RegisterPage extends React.Component{
     render(){
         return(
             <div>
-                <br/><br/><br/><br/><br/><br/>
+                <br/><br/>
                 This is Register page.
                 <p>
                     Sorry for the inconvenience, this page is under reconstruction.

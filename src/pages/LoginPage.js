@@ -11,11 +11,12 @@ export default class LoginPage extends React.Component{
     render(){
         return(
             <div>
-                <br/><br/><br/><br/><br/><br/>
+                
+                {/* <br/><br/>
                 This is Login page.
                 <p>
                     Sorry for the inconvenience, this page is under reconstruction.
-                </p>
+                </p> */}
             </div>
         );
     }
